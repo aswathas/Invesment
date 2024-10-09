@@ -1,0 +1,90 @@
+.recommendations-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #ffffff; /* White background */
+  color: #333333; /* Dark text for better visibility */
+  min-height: 100vh;
+}
+
+h1 {
+  color: #333333; /* Dark text color for header */
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.input-box {
+  display: flex;
+  width: 100%;
+  max-width: 500px;
+  margin-bottom: 20px;
+}
+
+input {
+  padding: 10px;
+  font-size: 16px;
+  width: 100%;
+  border: 2px solid #ccc;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  background-color: #007bff; /* Blue button */
+  color: white;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+button:hover:not(:disabled) {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+.stocks-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.stock-card {
+  background-color: #f9f9f9; /* Light background for cards */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  text-align: center;
+}
+
+h2 {
+  margin: 0 0 10px;
+  font-size: 1.5rem;
+}
+
+p {
+  font-size: 1rem;
+  color: #555;
+}
+
+@media (max-width: 768px) {
+  .stocks-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .stock-card {
+    width: 90%;
+  }
+}
