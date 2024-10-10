@@ -1,0 +1,116 @@
+/* Container Styling */
+.about-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100vw;
+  /* Full viewport width */
+  background-color: #0a0e1a;
+  /* Dark blue background */
+  color: #f7fafc;
+  /* Light text */
+  padding: 50px;
+  text-align: center;
+  overflow-y: auto;
+  /* Add scroll bar if content exceeds height */
+  margin: 0;
+  /* Remove any default margin */
+}
+
+/* Title and Subtitle */
+.about-title {
+  font-size: 3.5rem;
+  color: #0abbf1;
+  /* Bright blue for title */
+  margin-bottom: 20px;
+  font-weight: bold;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  /* Add text shadow */
+}
+
+.about-subtitle {
+  font-size: 1.5rem;
+  color: #cbd5e0;
+  /* Soft gray for subtitle */
+  margin-bottom: 40px;
+  max-width: 800px;
+  line-height: 1.6;
+  /* Improve readability */
+}
+
+/* About Content Box Styling */
+.about-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  width: 100%;
+  margin-top: 40px;
+  /* Space between title and content */
+}
+
+.about-box {
+  background-color: #fff;
+  /* White background for the box */
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  /* Soft shadow for depth */
+  transition: transform 0.2s ease-in-out;
+  /* Smooth hover effect */
+}
+
+.about-box:hover {
+  transform: translateY(-5px);
+  /* Slight upward movement on hover */
+}
+
+.box-title {
+  font-size: 1.8rem;
+  color: #0ad7fc;
+  /* Bright blue title */
+  margin-bottom: 15px;
+}
+
+.about-box p {
+  font-size: 1.1rem;
+  color: #666;
+  /* Dark gray text */
+  line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-title {
+    font-size: 2.5rem;
+  }
+
+  .about-subtitle {
+    font-size: 1.3rem;
+  }
+
+  .about-box {
+    padding: 20px;
+  }
+
+  .box-title {
+    font-size: 1.6rem;
+  }
+
+  .about-box p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-container {
+    padding: 20px;
+  }
+
+  .about-content {
+    grid-template-columns: 1fr;
+    /* Single column for small screens */
+  }
+}

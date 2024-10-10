@@ -1,3 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwinpm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init -pnd utilities;
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -39,4 +44,162 @@
 
 .read-the-docs {
   color: #888;
+}
+/* Navbar styling */
+.navbar {
+  background-color: #333;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  padding: 1.3rem 0;
+  /* Increase padding for more height */
+  height: auto;
+  /* Ensure it adapts to the content */
+  box-shadow: 0 2px 4px rgba(234, 238, 11, 0.2);
+  /* Add subtle shadow for depth */
+}
+
+/* Navbar links styling */
+.navbar-links {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar-links li {
+  margin: 0 3rem;
+  /* Reduced margin for better alignment */
+}
+
+.navbar-links li a {
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  /* Reduced font size for better scaling */
+  transition: background-color 0.3s ease;
+  /* Smooth transition for hover */
+}
+
+.navbar-links li a:hover {
+  background-color: #c4c714;
+  border-radius: 4px;
+  /* Rounded corners on hover */
+}
+
+/* Responsive navbar for smaller screens */
+@media (max-width: 768px) {
+  .navbar-links {
+    flex-direction: column;
+    /* Stack links vertically on mobile */
+    align-items: center;
+  }
+
+  .navbar-links li {
+    margin: 1rem 0;
+    /* Add vertical space between links */
+  }
+
+  .navbar-links li a {
+    font-size: 1.1rem;
+    /* Adjust font size for smaller screens */
+  }
+}
+
+/* Container or Page Background */
+.page-background {
+  background-image: url("./assets/background-image.png");
+  /* Path to your image */
+  background-size: cover;
+  /* Ensures the background covers the entire area */
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  /* Full viewport height */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  /* Text color over the background */
+  text-align: center;
+  padding: 20px;
+  /* Add padding for better spacing */
+}
+
+/* Styling for large text */
+.hero-text {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+  /* Improved line spacing */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  /* Subtle text shadow */
+}
+
+/* Subtext */
+.sub-text {
+  font-size: 1.4rem;
+  /* Slightly larger for better readability */
+  margin-bottom: 2rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  /* Subtle shadow for readability */
+}
+
+/* Button styles */
+.hero-button {
+  background-color: #6a0dad;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 0 1rem;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  /* Smooth transition for hover and active states */
+}
+
+.hero-button:hover {
+  background-color: #8b00ff;
+  transform: translateY(-2px);
+  /* Slight lift on hover */
+}
+
+.hero-button:active {
+  transform: translateY(2px);
+  /* Pressed effect */
+}
+
+/* Secondary button styles */
+.hero-button.secondary {
+  background-color: transparent;
+  border: 1px solid white;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.hero-button.secondary:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #f0f0f0;
+}
+
+.hero-button.secondary:active {
+  transform: translateY(2px);
+  /* Pressed effect */
+}
+
+/* Make the buttons stack vertically on small screens */
+@media (max-width: 768px) {
+  .hero-button {
+    width: 100%;
+    margin: 0.5rem 0;
+    padding: 1rem 0;
+  }
 }
